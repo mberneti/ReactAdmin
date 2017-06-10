@@ -1,0 +1,96 @@
+@import "_color.scss";
+@import "_fonts.scss";
+$lato: "muli", sans-serif;
+
+a,
+a:hover,
+a:focus,
+a:active {
+    // -moz-transition: .3s all;
+    // -o-transition: .3s all;
+    // -webkit-transition: .3s all;
+    // transition: .3s all;
+    text-decoration: none;
+    outline: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $shabnam;
+}
+
+html {
+    min-height: 100%;
+}
+
+html,
+body {
+    background-color: #fff;
+    font-family: $shabnam;
+    font-weight: 300;
+    direction: ltr;
+    color: $color-light-text;
+}
+
+.no-top-margin {
+    margin-top: 0 !important;
+}
+
+form.inline-form {
+    margin-top: 1.2em;
+
+    input, textarea {
+        padding: 15px;
+        font-size: 1.1em;
+        border: none;
+        box-shadow: 0 0 6px -2px #414141;
+        font-weight: 300;
+        background-color: $lighter-gray;
+        margin-bottom: 1em;
+        border-radius: 5px;
+    }
+
+    textarea {
+        min-height: 200px !important;
+    }
+
+    .clearform {
+        color: red;
+        margin-top: .75em;
+    }
+}
+
+.cbp-qtrotator blockquote p {
+    font-family: $shabnam;
+}
+
+.menu .menu__item {
+    font-family: $shabnam;
+}
+
+.btn.search {
+    font-family: $shabnam;
+}
+
+.Tokenize {
+    font-size: 1.4em;
+    font-family: $lato;
+}
+
+.quote-container {
+    min-height: 100vh;
+}

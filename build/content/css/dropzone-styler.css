@@ -1,0 +1,558 @@
+/* The MIT License */
+
+.filepicker,
+.filepicker *,
+.dropzone-previews,
+.dropzone-previews * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropzone-border {
+    border: 1px solid lightgray !important;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.filepicker {
+    position: relative;
+    max-width: 1120px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.filepicker.dz-clickable {
+    cursor: pointer;
+    border:1px solid #ddd;
+}
+
+.filepicker.dz-clickable .dz-message,
+.filepicker.dz-clickable .dz-message span {
+    cursor: pointer;
+}
+
+.filepicker.dz-clickable * {
+    cursor: default;
+}
+
+.filepicker .dz-message {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+
+.filepicker.dz-drag-hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.filepicker.dz-started .dz-message {
+    display: none;
+}
+
+.filepicker .dz-preview,
+.dropzone-previews .dz-preview {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #CFDADD;
+    padding: 6px 6px 6px 6px;
+    margin: 5px;
+}
+
+.filepicker .dz-preview.dz-file-preview [data-dz-thumbnail],
+.dropzone-previews .dz-preview.dz-file-preview [data-dz-thumbnail] {
+    display: none;
+}
+
+.filepicker .dz-preview .dz-details,
+.dropzone-previews .dz-preview .dz-details {
+    /*width: 250px;
+  height: 250px;*/
+    position: relative;
+    background: #ebebeb;
+    padding: 5px;
+    margin-bottom: 22px;
+    /*my edit*/
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .filepicker .dz-preview .dz-details,
+    .dropzone-previews .dz-preview .dz-details {
+        /*width: 150px;
+        height: 150px;*/
+        position: relative;
+        background: #ebebeb;
+        padding: 5px;
+        margin-bottom: 22px;
+    }
+}
+
+.filepicker .dz-preview .dz-details .dz-filename,
+.dropzone-previews .dz-preview .dz-details .dz-filename {
+    overflow: hidden;
+    height: 100%;
+}
+
+.filepicker .dz-preview .dz-details img,
+.dropzone-previews .dz-preview .dz-details img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+}
+
+@media (max-width: 400px) {
+    .filepicker .dz-preview .dz-details img,
+    .dropzone-previews .dz-preview .dz-details img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.filepicker .dz-preview .dz-details .dz-size,
+.dropzone-previews .dz-preview .dz-details .dz-size {
+    position: absolute;
+    bottom: -28px;
+    left: 3px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.filepicker .dz-preview.dz-error .dz-error-mark,
+.dropzone-previews .dz-preview.dz-error .dz-error-mark {
+    display: block;
+}
+
+.filepicker .dz-preview.dz-success .dz-success-mark,
+.dropzone-previews .dz-preview.dz-success .dz-success-mark {
+    display: block;
+}
+
+.filepicker .dz-preview:hover .dz-details img,
+.dropzone-previews .dz-preview:hover .dz-details img {
+    display: none;
+}
+
+.filepicker .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark,
+.filepicker .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    right: -10px;
+    top: -10px;
+}
+
+.filepicker .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+    color: #8cc657;
+}
+
+.filepicker .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+    color: #ee162d;
+}
+
+.filepicker .dz-preview .dz-progress,
+.dropzone-previews .dz-preview .dz-progress {
+    position: absolute;
+    top: 250px;
+    left: 6px;
+    right: 6px;
+    height: 6px;
+    background: #d7d7d7;
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .filepicker .dz-preview .dz-progress,
+    .dropzone-previews .dz-preview .dz-progress {
+        position: absolute;
+        top: 150px;
+        left: 6px;
+        right: 6px;
+        height: 6px;
+        background: #d7d7d7;
+        display: none;
+    }
+}
+
+.filepicker .dz-preview .dz-progress .dz-upload,
+.dropzone-previews .dz-preview .dz-progress .dz-upload {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: #8cc657;
+}
+
+.filepicker .dz-preview.dz-processing .dz-progress,
+.dropzone-previews .dz-preview.dz-processing .dz-progress {
+    display: block;
+}
+
+.filepicker .dz-preview .dz-error-message,
+.dropzone-previews .dz-preview .dz-error-message {
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(245, 245, 245, 0.8);
+    padding: 8px 10px;
+    color: #800;
+    width: 250px;
+    height: 250px;
+    z-index: 0;
+}
+
+.filepicker .dz-preview:hover.dz-error .dz-error-message,
+.dropzone-previews .dz-preview:hover.dz-error .dz-error-message {
+    display: block;
+}
+
+.filepicker .dz-preview.dz-error .dz-error-message span,
+.dropzone-previews .dz-preview.dz-error .dz-error-message span {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    width: 80%;
+    text-align: center;
+}
+
+.filepicker {
+    min-height: 360px;
+    background: white;
+}
+
+.filepicker .dz-default.dz-message {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    /*background-image: url("../img/spritemap.png");*/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    width: 428px;
+    height: 123px;
+    margin-left: -214px;
+    margin-top: -61.5px;
+    top: 50%;
+    left: 50%;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .filepicker .dz-default.dz-message {
+        /*background-image: url("../images/spritemap@2x.png");*/
+        -webkit-background-size: 428px 406px;
+        -moz-background-size: 428px 406px;
+        background-size: 428px 406px;
+    }
+}
+
+.filepicker .dz-default.dz-message span {
+   position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 30px;
+    color: #aaa;
+}
+
+.filepicker.dz-square .dz-default.dz-message {
+    background-position: 0 -123px;
+    width: 268px;
+    margin-left: -134px;
+    height: 174px;
+    margin-top: -87px;
+}
+
+.filepicker.dz-drag-hover .dz-message {
+    opacity: 0.15;
+    filter: alpha(opacity=15);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+}
+
+.filepicker.dz-started .dz-message {
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.filepicker .dz-preview,
+.dropzone-previews .dz-preview {
+    /*-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);*/
+    /*box-shadow: 1px 1px 4px rgba(0,0,0,0.16);*/
+    font-size: 14px;
+}
+
+.filepicker .dz-preview.dz-image-preview:hover .dz-details img,
+.dropzone-previews .dz-preview.dz-image-preview:hover .dz-details img {
+    display: block;
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.filepicker .dz-preview.dz-success .dz-success-mark,
+.dropzone-previews .dz-preview.dz-success .dz-success-mark {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+
+.filepicker .dz-preview.dz-error .dz-error-mark,
+.dropzone-previews .dz-preview.dz-error .dz-error-mark {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+
+.filepicker .dz-preview.dz-error .dz-progress .dz-upload,
+.dropzone-previews .dz-preview.dz-error .dz-progress .dz-upload {
+    background: #ee1e2d;
+}
+
+.filepicker .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark,
+.filepicker .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    /*background-image: url("spritemap.png");*/
+    background-repeat: no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .filepicker .dz-preview .dz-error-mark,
+    .dropzone-previews .dz-preview .dz-error-mark,
+    .filepicker .dz-preview .dz-success-mark,
+    .dropzone-previews .dz-preview .dz-success-mark {
+        /*background-image: url("../images/spritemap@2x.png");*/
+        -webkit-background-size: 428px 406px;
+        -moz-background-size: 428px 406px;
+        background-size: 428px 406px;
+    }
+}
+
+.filepicker .dz-preview .dz-error-mark span,
+.dropzone-previews .dz-preview .dz-error-mark span,
+.filepicker .dz-preview .dz-success-mark span,
+.dropzone-previews .dz-preview .dz-success-mark span {
+    display: none;
+}
+
+.filepicker .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+    background-position: -268px -123px;
+    right: 10px;
+    top: 10px;
+}
+
+.filepicker .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+    background-position: -268px -163px;
+    right: 10px;
+    top: 10px;
+}
+
+.filepicker .dz-preview .dz-progress .dz-upload,
+.dropzone-previews .dz-preview .dz-progress .dz-upload {
+    -webkit-animation: loading 0.4s linear infinite;
+    -moz-animation: loading 0.4s linear infinite;
+    -o-animation: loading 0.4s linear infinite;
+    -ms-animation: loading 0.4s linear infinite;
+    animation: loading 0.4s linear infinite;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    /*background-image: url("spritemap.png");*/
+    background-repeat: repeat-x;
+    background-position: 0px -400px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .filepicker .dz-preview .dz-progress .dz-upload,
+    .dropzone-previews .dz-preview .dz-progress .dz-upload {
+        /*background-image: url("../images/spritemap@2x.png");*/
+        -webkit-background-size: 428px 406px;
+        -moz-background-size: 428px 406px;
+        background-size: 428px 406px;
+    }
+}
+
+.filepicker .dz-preview.dz-success .dz-progress,
+.dropzone-previews .dz-preview.dz-success .dz-progress {
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.filepicker .dz-preview .dz-error-message,
+.dropzone-previews .dz-preview .dz-error-message {
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.filepicker .dz-preview:hover.dz-error .dz-error-message,
+.dropzone-previews .dz-preview:hover.dz-error .dz-error-message {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+
+.filepicker a.dz-remove,
+.dropzone-previews a.dz-remove {
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #eee));*/
+    /*background-image: -webkit-linear-gradient(top, #fafafa 0%, #eee 100%);*/
+    /*background-image: -moz-linear-gradient(top, #fafafa 0%, #eee 100%);*/
+    /*background-image: -o-linear-gradient(top, #fafafa 0%, #eee 100%);*/
+    /*background-image: -ms-linear-gradient(top, #fafafa 0%, #eee 100%);*/
+    /*background-image: linear-gradient(top, #fafafa 0%, #eee 100%);*/
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    text-decoration: none;
+    display: block;
+    padding: 4px 5px;
+    text-align: center;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.filepicker a.dz-remove:hover,
+.dropzone-previews a.dz-remove:hover {
+    color: #666;
+    cursor: pointer;
+}
+
+@-moz-keyframes loading {
+    0% {
+        background-position: 0 -400px;
+    }
+    100% {
+        background-position: -7px -400px;
+    }
+}
+
+@-webkit-keyframes loading {
+    0% {
+        background-position: 0 -400px;
+    }
+    100% {
+        background-position: -7px -400px;
+    }
+}
+
+@-o-keyframes loading {
+    0% {
+        background-position: 0 -400px;
+    }
+    100% {
+        background-position: -7px -400px;
+    }
+}
+
+@-ms-keyframes loading {
+    0% {
+        background-position: 0 -400px;
+    }
+    100% {
+        background-position: -7px -400px;
+    }
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0 -400px;
+    }
+    100% {
+        background-position: -7px -400px;
+    }
+}
+
+.filepicker>.upload-cover {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid lightgray !important;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #F0F0F0;
+}
+
+.upload-cover>h1 {
+    margin-top: 151px;
+    opacity: 0.2;
+    text-align: center;
+}
+
+.dz-preview {
+    background-color: #fff;
+}
+
+.single_file {
+    max-width: 294px;
+    width: 100%;
+}
+
+svg#Layer_1 {
+    width: 50px;
+    float: right;
+    margin-left: 10px;
+}
+
+.dropzone .dz-preview .dz-image{
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}

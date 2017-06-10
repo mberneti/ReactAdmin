@@ -1,0 +1,83 @@
+﻿@import "_fonts.scss";
+@keyframes arrow {
+    0% {
+        padding-right: 4px;
+    }
+    100% {
+        padding-right: 8px;
+    }
+}
+
+
+/*----------- svg animation ---------*/
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*-----------------*/
+
+
+/*--------button loading---------*/
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+button.active-loading {
+    > span {
+        display: none;
+    }
+    div {
+        span {
+            display: inline-block;
+            font-size: 2em;
+        }
+        span {
+            animation-name: blink;
+            animation-duration: 1.4s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            width: 4px;
+            height: 4px;
+            margin: 0 1px;
+            display: inline-block;
+            background: #fff;
+            border-radius: 100%;
+        }
+        span:nth-child(2) {
+            animation-delay: .2s;
+        }
+        span:nth-child(3) {
+            animation-delay: .4s;
+        }
+    }
+}
+
+button.deactive-loading {
+    div {
+        display: none;
+    }
+}
+
+/*-----------------*/

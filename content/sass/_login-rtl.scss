@@ -1,0 +1,115 @@
+html,body{
+background-color: #c8c8c8;
+}
+label{
+    text-align: right;
+}
+.login-wrap {
+    button,
+    input,
+    label,
+    .tel-prefix,
+    a {
+        font-family: $shabnam;
+        font-weight: 300;
+        font-size: 1.1em;
+    }
+    .input,
+    .tel-prefix {
+        letter-spacing: 2px;
+    }
+    .login-btn {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #549ef8;
+        font-family: $shabnam;
+        padding-bottom: 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+        font-size: 1em;
+        margin-top: 5px;
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+    .tab {
+        color: #fff;
+        border-color: #1161ee;
+    }
+    .group {
+        position: relative;
+        .tel-input {
+            padding-left: 80px;
+        }
+        .tel-prefix {
+            left: 20px;
+            position: absolute;
+            direction: ltr;
+            color: #fff;
+            top: 50%;
+            margin-top: .1em;
+            top: 50%;
+        }
+        .tel-preview {
+            direction: ltr;
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            font-size: 2em;
+            letter-spacing: 3px;
+            font-weight: 100;
+            display: block;
+        }
+        >label {
+            color: #ec5252;
+            text-align: right;
+            font-size: .9em;
+        }
+    }
+}
+
+.login-form {
+    direction: rtl;
+    .foot-lnk {
+        font-family: $shabnam;
+        line-height: 1.5;
+    }
+    >div {
+        padding-top: 20px;
+    }
+}
+
+input {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        direction: rtl;
+        font-family: $shabnam;
+        font-weight: normal;
+        font-size: 1.1em;
+        letter-spacing: 0;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        direction: rtl;
+        font-family: $shabnam;
+        font-weight: normal;
+        font-size: 1.1em;
+        letter-spacing: 0;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        direction: rtl;
+        font-family: $shabnam;
+        font-weight: normal;
+        font-size: 1.1em;
+        letter-spacing: 0;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        direction: rtl;
+        font-family: $shabnam;
+        font-weight: normal;
+        font-size: 1.1em;
+        letter-spacing: 0;
+    }
+}

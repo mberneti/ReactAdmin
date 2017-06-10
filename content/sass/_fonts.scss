@@ -1,0 +1,92 @@
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+$open-sans: "BBlog Open Sans", sans-serif;
+$yekan: "BBlog BYekan",'Lato', Tahoma;
+$shabnam: "shabnam",'Lato', Tahoma;
+/*$lato:'Lato', Calibri, Arial, sans-serif;*/
+$lato:'Lato', $yekan;
+$font-vazir:"BBlog Vazir";
+$font-droid:"BBlog Droid";
+
+@font-face {
+    font-family: "BBlog Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.svg#OpenSansRegular") format("svg");
+}
+
+@font-face {
+    font-family: "BBlog BYekan";
+    src: url("../fonts/BYekan.eot?#") format("eot"), url("../fonts/BYekan.woff") format("woff"), url("../fonts/BYekan.ttf") format("truetype");
+}
+
+/*    -----  Lato  ----------------------------------------------------- */
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../fonts/Lato-Light.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../fonts/Lato-Light.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/Lato-Bold.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/Lato-Bold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/*  -------------------------------------------------------------------- */
+@font-face {
+    font-family: shabnam;
+    src: url("../fonts/Shabnam.eot");
+    src: url("../fonts/Shabnam.eot?#iefix") format("embedded-opentype"),url("../fonts/Shabnam.woff") format("woff"),url("../fonts/Shabnam.ttf") format("truetype");
+    font-weight: normal
+}
+
+@font-face {
+    font-family: shabnam;
+    src: url("../fonts/Shabnam-Bold.eot");
+    src: url("../fonts/Shabnam-Bold.eot?#iefix") format("embedded-opentype"),url("../fonts/Shabnam-Bold.woff") format("woff"),url("../fonts/Shabnam-Bold.ttf") format("truetype");
+    font-weight: bold
+}
+
+@font-face {
+    font-family: shabnam;
+    src: url("../fonts/Shabnam-Light.eot");
+    src: url("../fonts/Shabnam-Light.eot?#iefix") format("embedded-opentype"),url("../fonts/Shabnam-Light.woff") format("woff"),url("../fonts/Shabnam-Light.ttf") format("truetype");
+    font-weight: 300
+}

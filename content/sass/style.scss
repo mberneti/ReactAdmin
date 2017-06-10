@@ -1,0 +1,114 @@
+// @import "./login.scss";
+// @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// @import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "_all.scss";
+#wrapper>nav {
+    margin-bottom: 0;
+    background-color: #F8F8F8!important;
+    .nav.navbar-top-links .fullname {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+}
+
+#page-wrapper {
+    margin: 0 250px 0 0!important;
+    padding-bottom: 1px!important;
+}
+
+// menu
+.sidebar ul li {
+    border-bottom: none!important;
+}
+
+.metismenu {
+    background-color: #F8F8F8;
+    color: #5e5e5e;
+    &::after,
+    .metismenu-container {
+        box-shadow: none;
+        padding: 0;
+    }
+    font-family: $shabnam;
+    .metismenu-state-icon {
+        float: left;
+    }
+}
+
+.metismenu-link.has-active-child {
+    color: #5e5e5e;
+    background-color: #e4e4e4;
+}
+
+.metismenu-link,
+.metismenu-link.active {
+    color: #5e5e5e;
+    font-family: $shabnam;
+    text-shadow: none;
+    padding-right: 15px;
+}
+
+.metismenu-link.active {
+    font-weight: bolder;
+    background-color: #e4e4e4!important;
+}
+
+.metismenu-link:hover {
+    color: #5e5e5e;
+    background-color: #EEE!important;
+}
+
+i.metismenu-icon {
+    text-align: center;
+    width: 16px;
+    margin-left: 7px;
+}
+
+i.metismenu-icon.fa.fa-undefined {
+    display: none;
+}
+// --------------------------------------------------------------------------------------
+body {
+    background-color: #efefef;
+}
+
+.tether-target input {
+    text-align: left;
+    width: 100%;
+    height: 35px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.dropdown-menu{
+    left:0px!important;
+    right: auto!important;
+}
+.navbar-top-links .dropdown-user{
+    left:2px!important;
+    right: auto!important;
+    li{
+    min-width: 180px;
+    }
+}
+
+.multi-input-container{
+    border-right: 1px solid;
+    background-color: cornsilk;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.multi-input-item{
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+// --------------------------------------------------------------------------------------

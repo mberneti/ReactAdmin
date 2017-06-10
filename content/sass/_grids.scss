@@ -1,0 +1,55 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "_common.scss";
+
+.no-gutter-item {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.card {
+    /* start thumb */
+    .thumb-img, .thumb-description ,.news-img, .news-description{
+        @extend .pull-right;
+        @extend .no-gutter-item;
+    }
+
+    .thumb-img {
+        @extend .col-xs-5;
+        @extend .col-sm-3;
+        @extend .col-md-5;
+    }
+
+    .thumb-description {
+        @extend .col-xs-7;
+        @extend .col-sm-9;
+        @extend .col-md-7;
+    padding-right: 0;
+    padding-left: 0;
+    }
+    /* end thumb */
+
+    
+    /* start news */
+    .news-img {
+        @extend .col-sm-4;
+        @extend .col-md-5;
+    }
+
+    .news-description {
+        @extend .col-sm-8;
+        @extend .col-md-7;
+    }
+    /* end news */
+    &.gallery{
+        figure{
+        @extend .col-xs-12;
+        @extend .col-sm-4;
+        @extend .col-md-4;
+        @extend .pull-right;
+        }
+    }
+    
+    /* start gallery */
+    /* end gallery */
+
+}

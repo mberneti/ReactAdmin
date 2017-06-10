@@ -1,0 +1,198 @@
+
+/*black command white*/
+.bw {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+/* ---------------------------  */
+*::-moz-selection {
+    background-color: rgba(22, 144, 147, 0.15);
+}
+
+*::selection {
+    background-color: rgba(22, 144, 147, 0.15);
+}
+
+.rotate {
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-ltr {
+    direction: ltr;
+}
+
+.text-rtl {
+    direction: rtl;
+}
+
+
+/*make an html svg object also a clickable link*/
+
+a.svg {
+    position: relative;
+    display: inline-block;
+}
+
+a.svg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.clear{
+    clear:both;
+}
+
+.rotate-y {
+    -moz-transform: rotateY( 180deg );
+    -ms-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+/*input {
+    -moz-box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}*/
+.no-border{
+    border:none!important;
+}
+.responsive-img{
+    width:100%;
+}
+
+.relative{
+    position:relative;
+}
+
+.disable-btn{
+    opacity:.3;
+    a{
+        cursor:default!important;
+    }
+}
+.center-position{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -moz-transition: 2s ease;
+        -o-transition: 2s ease;
+        -webkit-transition: 2s ease;
+        transition: 2s ease;
+}
+
+
+
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+@mixin card($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+
+.panel,.panel-heading,.form-control,.dropdown-menu{
+    border-radius: 0;
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: #9c9c9c;
+}
+
+.form-control{
+    box-shadow: none;
+    border-color: #ddd;
+}
+.dz-hidden-input{
+    position: relative!important;
+}
