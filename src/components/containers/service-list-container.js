@@ -28,7 +28,7 @@ class ServiceContainer extends React.Component {
     store.dispatch(loadDashboardTitle(this.props.route.title));
   }
   editItem(id) {
-    store.dispatch(push('/admin/service/edit/' + id));
+    store.dispatch(push('/ReactAdmin/admin/service/edit/' + id));
   }
   deleteItem(id) {
     swAlert.warning(() => this.onConfirmDelete(id));

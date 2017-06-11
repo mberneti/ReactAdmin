@@ -23,7 +23,7 @@ function requireUserRole(nextState, replace) {
     });
   }else if (loginApi.hasRole('Admin')) {
     replace({
-      pathname: '/admin',
+      pathname: '/ReactAdmin/admin',
       state: { nextPathname: nextState.location.pathname }
     });
   }

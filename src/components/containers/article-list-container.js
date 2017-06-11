@@ -28,7 +28,7 @@ class ArticleContainer extends React.Component {
     store.dispatch(loadDashboardTitle(this.props.route.title));
   }
   editItem(id) {
-    store.dispatch(push('/admin/article/edit/' + id));
+    store.dispatch(push('/ReactAdmin/admin/article/edit/' + id));
   }
   deleteItem(id) {
     swAlert.warning(() => this.onConfirmDelete(id));
