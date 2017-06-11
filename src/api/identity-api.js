@@ -93,7 +93,7 @@ export function logout() {
         // store.dispatch(requestLogout());
         localStorage.removeItem('identityToken');
         // store.dispatch(receiveLogout());
-        store.dispatch(push("/login"));
+        store.dispatch(push("/ReactAdmin/login"));
 }
 
 // Check User Login Status
