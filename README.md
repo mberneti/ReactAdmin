@@ -4,7 +4,7 @@ This project is a port of the famous Free Admin Bootstrap Theme [SB Admin v2.0](
 
 ## [Demo](https://mberneti.github.io/ReactAdmin/)
 
-<img src='https://startbootstrap.com/img/templates/sb-admin-2.jpg' width='600' alt='Login Demo'>
+<img src='https://mberneti.github.io/ReactAdmin/content/images/DashboardDemo.png' width='600' alt='Login Demo'>
 
 ## Available Scripts
 
@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Note: The page will reload if you make edits.<br>
 
-<img src='http://berneti.ir/LoginDemo.png' width='600' alt='Login Demo'>
+<img src='https://mberneti.github.io/ReactAdmin/content/images/LoginDemo.png' width='600' alt='Login Demo'>
 
 Now you have two choices to make:
 #### 1. Login as an Admin with `11111` verification key
