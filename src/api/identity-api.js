@@ -141,7 +141,7 @@ function successLogin(verifycode) {
     localStorage.setItem('identityToken', JSON.stringify(identityToken));
     
     store.dispatch(receiveLogin(identityToken));
-    store.dispatch(push("/"));
+    store.dispatch(push("/ReactAdmin/"));
 }
 
 function successSentVerifyCode() {
