@@ -11,14 +11,14 @@ let content = [
     {
         icon: 'home',
         label: 'داشبورد',
-        to: '/'
+        to: '/ReactAdmin/'
     }
 ];
 
 const userMenu = [{
     icon: 'gear',
     label: 'ویرایش مشخصات',
-    to: '/job/edit'
+    to: '/ReactAdmin/job/edit'
 }];
 
 const adminMenu = [{
@@ -27,11 +27,11 @@ const adminMenu = [{
     content: [
         {
             label: 'مقاله جدید',
-            to: '/admin/article/add'
+            to: '/ReactAdmin/admin/article/add'
         },
         {
             label: 'مدیریت مقالات',
-            to: '/admin/article/manage'
+            to: '/ReactAdmin/admin/article/manage'
         }
     ]
 },
@@ -41,11 +41,11 @@ const adminMenu = [{
     content: [
         {
             label: 'سرویس جدید',
-            to: '/admin/service/add'
+            to: '/ReactAdmin/admin/service/add'
         },
         {
             label: 'مدیریت سرویس‌ها',
-            to: '/admin/service/manage'
+            to: '/ReactAdmin/admin/service/manage'
         }
     ]
 }];
@@ -71,11 +71,11 @@ class menu extends React.Component {
 
         history.listen(location => {
 
-            if (_.includes(location.pathname, '/admin/article/edit'))
-                current.activeLink('/admin/article/manage');
+            if (_.includes(location.pathname, '/ReactAdmin/admin/article/edit'))
+                current.activeLink('/ReactAdmin/admin/article/manage');
 
-            if (_.includes(location.pathname, '/admin/plan/edit'))
-                current.activeLink('/admin/plan/manage');
+            if (_.includes(location.pathname, '/ReactAdmin/admin/plan/edit'))
+                current.activeLink('/ReactAdmin/admin/plan/manage');
 
         });
 

@@ -22,7 +22,7 @@ class LoginContainer extends React.Component {
   componentDidMount() {
 
     if (this.props.isAuthenticated) {
-      store.dispatch(push('/'));
+      store.dispatch(push('/ReactAdmin/'));
     }
 
   }
