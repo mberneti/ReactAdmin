@@ -51,11 +51,11 @@ export default (
     <Route onEnter={requireUserRole} component={mainLayoutContainer}>
 
       <Route title="صفحه مدیریت" component={pageLayoutContainer}>
-        <Route path="/" component={DashboardContainer} />
+        <Route path="/ReactAdmin/" component={DashboardContainer} />
         </Route>
 
       <Route component={pageLayoutContainer} >
-        <Route path="/job/edit" title="ویرایش مشخصات" component={jobownerJobContainer} />
+        <Route path="/ReactAdmin/job/edit" title="ویرایش مشخصات" component={jobownerJobContainer} />
       </Route>
 
     </Route>
@@ -63,10 +63,10 @@ export default (
     <Route onEnter={requireAdminRole} component={mainLayoutContainer}>
 
       <Route title="صفحه مدیریت" component={pageLayoutContainer} >
-        <Route path="/admin" component={DashboardContainer} />
+        <Route path="/ReactAdmin/admin" component={DashboardContainer} />
       </Route>
 
-      <Route path="/admin" component={pageLayoutContainer} >
+      <Route path="/ReactAdmin/admin" component={pageLayoutContainer} >
 
         <Route path="article/add" title="خبر جدید" component={ArticleContainer} />
         <Route path="article/manage" title="مدیریت اخبار" component={ArticleListContainer} />
@@ -80,7 +80,7 @@ export default (
 
     </Route>
 
-    <Route path="/login" component={LoginContainer} />
+    <Route path="/ReactAdmin/login" component={LoginContainer} />
 
   </Router>
 );
