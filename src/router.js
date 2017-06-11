@@ -18,7 +18,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 function requireUserRole(nextState, replace) {
   if (!loginApi.loggedIn()) {
     replace({
-      pathname: '/login',
+      pathname: '/ReactAdmin/login',
       state: { nextPathname: nextState.location.pathname }
     });
   }else if (loginApi.hasRole('Admin')) {
@@ -33,12 +33,12 @@ function requireAdminRole(nextState, replace) {
 
   if (!loginApi.loggedIn()) {
     replace({
-      pathname: '/login',
+      pathname: '/ReactAdmin/login',
       state: { nextPathname: nextState.location.pathname }
     });
   }else if (!loginApi.hasRole('Admin')) {
     replace({
-      pathname: '/',
+      pathname: '/ReactAdmin/',
       state: { nextPathname: nextState.location.pathname }
     });
   }

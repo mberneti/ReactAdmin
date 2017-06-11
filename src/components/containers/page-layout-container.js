@@ -31,7 +31,7 @@ class PageLayoutContainer extends React.Component {
   componentDidUpdate() {
 
     if (!loginApi.loggedIn())
-      store.dispatch(push('/login'));
+      store.dispatch(push('/ReactAdmin/login'));
 
   }
 
