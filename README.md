@@ -4,7 +4,7 @@ This project is a port of the famous Free Admin Bootstrap Theme [SB Admin v2.0](
 
 ## [Demo](https://mberneti.github.io/ReactAdmin/)
 
-<img src='https://mberneti.github.io/ReactAdmin/content/images/DashboardDemo.png' width='600' alt='Login Demo'>
+<img src='https://mberneti.github.io/ReactAdmin/content/images/DashboardDemo.png' style="border:1px solid silver" width='600' alt='Login Demo'>
 
 ## Available Scripts
 
