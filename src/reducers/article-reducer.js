@@ -4,7 +4,7 @@ import ArticleModel from '../models/article';
 const initialState = {
   article: new ArticleModel(),
   articleList: [],
-  suggestions: []//[{value:"1",label:'تگ۱'},{value:"2",label:'tag2'}]
+  suggestions: []
 };
 
 const articleReducer = function (state = initialState, action) {
@@ -13,6 +13,7 @@ const articleReducer = function (state = initialState, action) {
       {
         console.log('RESET_ARTICLE_MODEL')
         state.article = new ArticleModel();
+        state.article.Images=[];
         console.log(state.article);
         return state;
       }

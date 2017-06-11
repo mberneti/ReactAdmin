@@ -30,8 +30,12 @@ class article extends React.Component {
   }
   refreshModel () {
     let model = new ArticleModel(this.refs);
+    console.log(this.props.article.Images);
     console.log(model);
     store.dispatch(updateArticleModel(model));
+  }
+  clearFiles () {
+      this.refs.Images.clearFiles();
   }
   getData () {
     let model = new ArticleModel(this.refs);

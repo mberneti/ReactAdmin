@@ -51,9 +51,11 @@ export default class BFileInput extends React.Component {
     };
 
 
-    this.clearImages = () => {
-      this.dropzone.removeAllFiles(true);
-    }
+    // this.clearFiles = () => {
+    //   this.dropzone.removeAllFiles(true);
+    // }
+
+    this.clearFiles = this.clearFiles.bind(this);
 
     //mock files
     this.setImages = (images) => {
@@ -140,7 +142,9 @@ export default class BFileInput extends React.Component {
     this.dropzone = null;
 
   }
-
+  clearFiles(){
+    this.dropzone.removeAllFiles(true);
+  }
   // fired after component render
   componentDidMount() {
     this.setImages(this.state.value);

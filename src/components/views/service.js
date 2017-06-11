@@ -39,6 +39,9 @@ class service extends React.Component {
   updateImages(images) {
     this.refreshModel();
   }
+  clearFiles () {
+      this.refs.Images.clearFiles();
+  }
   render() {
     return (
       <PanelLayout title="فرم سرویس">

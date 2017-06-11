@@ -11,6 +11,7 @@ import LoginContainer from './components/containers/login-container';
 import ArticleContainer from './components/containers/article-container';
 import ArticleListContainer from './components/containers/article-list-container';
 import ServiceContainer from './components/containers/service-container';
+import ServiceListContainer from './components/containers/service-list-container';
 import jobownerJobContainer from './components/containers/jobownerJob-container';
 
 const history = syncHistoryWithStore(browserHistory, store);
@@ -73,7 +74,7 @@ export default (
         <Route path="article/edit/:itemId" title="ویرایش خبر" isEditRoute="true" component={ArticleContainer} />
 
         <Route path="service/add" title="سرویس جدید" component={ServiceContainer} />
-        <Route path="service/manage" title="مدیریت سرویس‌ها" component={ServiceContainer} />
+        <Route path="service/manage" title="مدیریت سرویس‌ها" component={ServiceListContainer} />
         <Route path="service/edit/:itemId" title="ویرایش سرویس" isEditRoute="true" component={ServiceContainer} />
 
       </Route>

@@ -37,6 +37,7 @@ class ServiceContainer extends React.Component {
   componentDidUpdate() {
 
     if (!this.props.isLoaded && !this.props.route.isEditRoute) {
+      this.refs.child.clearFiles();
       store.dispatch(resetServiceModel());
       store.dispatch(loadDashboardCompleted());
     }

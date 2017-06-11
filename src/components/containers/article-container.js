@@ -11,8 +11,9 @@ class ArticleContainer extends React.Component {
 
     let _current = this;
 
-    this.type = this.props.title; //this is the name of the route
-    if (this.props.isEditRoute) {
+    this.type = this.props.route.title; //this is the name of the route
+    
+    if (this.props.route.isEditRoute) {
 
       let id = this.props.params.itemId;
 
@@ -30,7 +31,8 @@ class ArticleContainer extends React.Component {
   }
   componentDidUpdate(prevProps) {
 
-    if (!this.props.isLoaded && !this.props.isEditRoute) {
+    if(!this.props.isLoaded && !this.props.route.isEditRoute){
+      this.refs.child.clearFiles();
       store.dispatch(resetArticleModel());
       store.dispatch(loadDashboardCompleted());
     }
