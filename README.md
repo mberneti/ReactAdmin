@@ -35,7 +35,7 @@ $ npm install
 ### `npm start` or `yarn start`
 
 Runs the app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000/ReactAdmin/](http://localhost:3000/ReactAdmin/) to view it in the browser.
 
 Note: The page will reload if you make edits.<br>
 
